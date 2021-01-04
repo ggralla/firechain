@@ -1,0 +1,78 @@
+[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_owner",
+				"type": "address"
+			},
+			{
+				"name": "_key",
+				"type": "bytes32"
+			}
+		],
+		"name": "read",
+		"outputs": [
+			{
+				"components": [
+					{
+						"name": "value",
+						"type": "bytes32"
+					}
+				],
+				"name": "_value",
+				"type": "tuple"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_owner",
+				"type": "address"
+			},
+			{
+				"name": "_key",
+				"type": "bytes32"
+			},
+			{
+				"components": [
+					{
+						"name": "value",
+						"type": "bytes32"
+					}
+				],
+				"name": "_value",
+				"type": "tuple"
+			}
+		],
+		"name": "write",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_owner",
+				"type": "address"
+			}
+		],
+		"name": "createStore",
+		"outputs": [
+			{
+				"name": "created",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
