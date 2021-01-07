@@ -7,7 +7,7 @@ pragma experimental ABIEncoderV2;
 contract FireChainStore {
 
     struct ValueType {
-        bytes32 value;
+        bytes value;
     }
     struct Store {
         address owner;

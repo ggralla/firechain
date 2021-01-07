@@ -17,7 +17,7 @@
 				"components": [
 					{
 						"name": "value",
-						"type": "bytes32"
+						"type": "bytes"
 					}
 				],
 				"name": "_value",
@@ -43,7 +43,7 @@
 				"components": [
 					{
 						"name": "value",
-						"type": "bytes32"
+						"type": "bytes"
 					}
 				],
 				"name": "_value",

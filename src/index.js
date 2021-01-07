@@ -35,7 +35,10 @@ export async function fireRead(key) {
 
 export async function fireWrite(key, value) {
     const convKey = w3.utils.utf8ToHex(key).padEnd(66,"0") ;
-    const convValue = w3.utils.utf8ToHex(value).padEnd(66,"0") ;
+    // TODO: don't pad value?
+    const convValue = w3.utils.utf8ToHex(value).padEnd(66,"0");
+    //slice(0,66);
+    console.log("prewrite", convKey, convValue);
     //const nonce = await w3.eth.getTransactionCount(account.address, 'pending')
     const ret = await contract.methods.write(NAMESPACE, convKey, {value: convValue}).send({gas:99999});
     console.log("write", ret)
