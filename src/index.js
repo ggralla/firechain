@@ -20,7 +20,7 @@ const NAMESPACE = "0xfBEd705f2BC14897A008425189aAA66d2Ae387c1";
 //const NAMESPACE = account.address;
 console.log(NAMESPACE)
 
-const CONTRACT_ADDR = w3.utils.toChecksumAddress("0x02dB0556424733e0a4a85970c9A104E20555415E");
+const CONTRACT_ADDR = w3.utils.toChecksumAddress("0xb72CF8bDAB86A682c2b4e2489933fCbA33Aa8b1f");
 export const contract = new w3.eth.Contract(abi, CONTRACT_ADDR);
 console.log(account);
 contract.options.from = account.address;
@@ -36,7 +36,7 @@ export async function fireRead(key) {
 export async function fireWrite(key, value) {
     const convKey = w3.utils.utf8ToHex(key).padEnd(66,"0") ;
     // TODO: don't pad value?
-    const convValue = w3.utils.utf8ToHex(value).padEnd(66,"0");
+    const convValue = w3.utils.hexToBytes(w3.utils.utf8ToHex(value));
     //slice(0,66);
     console.log("prewrite", convKey, convValue);
     //const nonce = await w3.eth.getTransactionCount(account.address, 'pending')

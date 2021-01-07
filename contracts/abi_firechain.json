@@ -3,10 +3,33 @@
 		"constant": false,
 		"inputs": [
 			{
+				"internalType": "address",
+				"name": "_owner",
+				"type": "address"
+			}
+		],
+		"name": "createStore",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "created",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "address",
 				"name": "_owner",
 				"type": "address"
 			},
 			{
+				"internalType": "bytes32",
 				"name": "_key",
 				"type": "bytes32"
 			}
@@ -16,10 +39,12 @@
 			{
 				"components": [
 					{
+						"internalType": "bytes",
 						"name": "value",
 						"type": "bytes"
 					}
 				],
+				"internalType": "struct FireChainStore.ValueType",
 				"name": "_value",
 				"type": "tuple"
 			}
@@ -32,45 +57,30 @@
 		"constant": false,
 		"inputs": [
 			{
+				"internalType": "address",
 				"name": "_owner",
 				"type": "address"
 			},
 			{
+				"internalType": "bytes32",
 				"name": "_key",
 				"type": "bytes32"
 			},
 			{
 				"components": [
 					{
+						"internalType": "bytes",
 						"name": "value",
 						"type": "bytes"
 					}
 				],
+				"internalType": "struct FireChainStore.ValueType",
 				"name": "_value",
 				"type": "tuple"
 			}
 		],
 		"name": "write",
 		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "_owner",
-				"type": "address"
-			}
-		],
-		"name": "createStore",
-		"outputs": [
-			{
-				"name": "created",
-				"type": "bool"
-			}
-		],
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
